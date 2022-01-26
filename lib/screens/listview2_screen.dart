@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 class ListView2Screen extends StatelessWidget {
@@ -16,8 +14,6 @@ class ListView2Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ListView1'),
-        elevation: 0,
-        backgroundColor: Colors.indigo,
       ),
       body: ListView.separated(
           itemBuilder: (_, index) => ListTile(
@@ -26,10 +22,7 @@ class ListView2Screen extends StatelessWidget {
                   Icons.arrow_forward_ios_rounded,
                   color: Colors.indigo,
                 ),
-                onTap: () {
-                  final game = options[index];
-                  print(game);
-                },
+                onTap: () {},
               ),
           separatorBuilder: (_, __) => const Divider(),
           itemCount: options.length),
